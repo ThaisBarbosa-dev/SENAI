@@ -1,0 +1,315 @@
+/* ========================================
+   ROCKLIFE STORE - TELA RECUPERAR SENHA
+======================================== */
+
+/* Reset geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo da página */
+body.auth-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+
+  /* FUNDO DA PÁGINA DE LOGIN */
+
+  body.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+      url("./img/fundo_cadastro.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+/* Textura decorativa no fundo */
+body.auth-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background: repeating-linear-gradient(
+    115deg,
+    transparent 0,
+    transparent 80px,
+    rgba(255, 255, 255, 0.025) 81px,
+    transparent 83px
+  );
+
+  opacity: 0.5;
+}
+
+/* Logo */
+.auth-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 5px;
+
+  position: relative;
+  z-index: 1;
+
+  transition: 0.3s;
+}
+
+.auth-brand span:first-child {
+  font-size: 35px;
+  color: #ff2424;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+.auth-brand span:last-child {
+  font-size: 13px;
+  letter-spacing: 8px;
+  color: #cccccc;
+  text-transform: uppercase;
+}
+
+.auth-brand:hover {
+  transform: scale(1.05);
+}
+
+/* Cartão principal */
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 40px;
+
+  background: rgba(18, 18, 18, 0.95);
+  border: 1px solid rgba(255, 40, 40, 0.35);
+  border-radius: 18px;
+
+  box-shadow:
+    0 0 25px rgba(255, 0, 0, 0.12),
+    0 20px 60px rgba(0, 0, 0, 0.7);
+
+  position: relative;
+  z-index: 1;
+
+  backdrop-filter: blur(10px);
+}
+
+/* Linha vermelha superior */
+.auth-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 60%;
+  height: 3px;
+
+  background: linear-gradient(90deg, transparent, #ff2020, transparent);
+
+  box-shadow: 0 0 15px #ff0000;
+}
+
+/* Título */
+.auth-card h1 {
+  font-size: 27px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 800;
+}
+
+/* Subtítulo */
+.auth-subtitle {
+  color: #aaaaaa;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Formulário */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+/* Labels */
+.form-group label {
+  color: #eeeeee;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Campos */
+.form-group input {
+  width: 100%;
+  padding: 15px;
+
+  background: #252525;
+  border: 1px solid #444444;
+  border-radius: 9px;
+
+  color: #ffffff;
+  font-size: 14px;
+
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Placeholder */
+.form-group input::placeholder {
+  color: #888888;
+}
+
+/* Efeito ao clicar no campo */
+.form-group input:focus {
+  border-color: #ff2929;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 0, 0, 0.12),
+    0 0 12px rgba(255, 0, 0, 0.15);
+
+  background: #303030;
+}
+
+/* Texto de orientação */
+.form-hint {
+  color: #999999;
+  font-size: 12px;
+}
+
+/* Botão */
+.btn-primary {
+  width: 100%;
+  padding: 16px;
+  margin-top: 5px;
+
+  background: linear-gradient(135deg, #e60000, #a00000);
+  border: none;
+  border-radius: 9px;
+
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  transition: 0.3s;
+
+  box-shadow: 0 5px 18px rgba(220, 0, 0, 0.25);
+}
+
+/* Efeito do botão */
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ff2929, #c00000);
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Links */
+.auth-links {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.auth-links a {
+  color: #ff3939;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.auth-links a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #ff0000;
+  text-decoration: underline;
+}
+
+.auth-links p {
+  margin-top: 18px;
+  color: #aaaaaa;
+  font-size: 13px;
+}
+
+/* Voltar para a loja */
+.auth-back {
+  margin-top: 25px;
+
+  color: #aaaaaa;
+  text-decoration: none;
+  font-size: 13px;
+
+  position: relative;
+  z-index: 1;
+
+  transition: 0.3s;
+}
+
+.auth-back:hover {
+  color: #ff2929;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+  body.auth-page {
+    padding: 25px 16px;
+  }
+
+  .auth-brand span:first-child {
+    font-size: 29px;
+  }
+
+  .auth-card {
+    padding: 28px 22px;
+    border-radius: 14px;
+  }
+
+  .auth-card h1 {
+    font-size: 23px;
+  }
+
+  .auth-subtitle {
+    font-size: 13px;
+  }
+
+  .btn-primary {
+    padding: 14px;
+  }
+}

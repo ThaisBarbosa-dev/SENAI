@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Conta - RockLife Store</title>
+    <link rel="stylesheet" href="cadrastro.css" />
+  </head>
+  <body class="auth-page">
+    <a
+      href="index.html"
+      class="auth-brand"
+      aria-label="RockLife Store - Voltar ao início"
+    >
+      <span>ROCKLIFE</span>
+      <span>store</span>
+    </a>
+
+    <main class="auth-card">
+      <h1>Bem-vindo de volta!</h1>
+      <p class="auth-subtitle">
+        Entre com seus dados para acompanhar seus pedidos. Seus dados são
+        tratados conforme nossa
+        <a href="index.html#privacidade">Política de Privacidade</a>.
+      </p>
+
+      <form action="index.html" method="GET" class="auth-form">
+        <div class="form-group">
+          <label for="usuario">E-mail ou nome de usuário</label>
+          <input
+            type="text"
+            id="usuario"
+            name="usuario"
+            placeholder="seuemail@exemplo.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Sua senha</label>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="Digite sua senha"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn-primary">Entrar na Conta</button>
+      </form>
+
+      <div class="auth-links">
+        <a href="../esqueci_senha/esqueci_senha.html">Esqueci minha senha</a>
+
+        <p>
+          Ainda não tem cadastro?
+          <a href="criar_conta.html">Crie sua conta aqui</a>
+        </p>
+        <p>
+          <a href="index.html#termos-uso">Termos de Uso</a> ·
+          <a href="index.html#trocas-reembolso">Reembolso</a>
+        </p>
+      </div>
+    </main>
+
+    <a href="../cadastro_produto/index.html" class="auth-back">&larr; Voltar para a loja</a>
+  </body>
+</html>

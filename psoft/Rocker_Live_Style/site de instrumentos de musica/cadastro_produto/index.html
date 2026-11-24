@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RockLife - Loja de Instrumentos e Roupas Rock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho Principal -->
+    <header>
+      <div>
+        <a href="#" aria-label="RockLife Store - Página inicial">
+          <h1>ROCKLIFE</h1>
+          <span>store</span>
+        </a>
+      </div>
+
+      <!-- Barra de Pesquisa -->
+      <div>
+        <form action="#" method="GET" role="search">
+          <label for="busca-produtos" class="sr-only">Buscar produtos</label>
+          <input
+            id="busca-produtos"
+            type="text"
+            name="q"
+            placeholder="Buscar guitarras, baixos, jaquetas..."
+          />
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+
+      <!-- Navegação de Usuário -->
+      <nav aria-label="Menu do usuário">
+        <ul>
+          <li>
+            <a href="../cadastro_cliente/cadrastro.html"> Minha Conta </a></li>
+          <li><a href="#carrinho">Carrinho (<span>0</span>)</a></li>
+          <li><a href="../politicas/politica_privacidade.html"> Política de Privacidade </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Navegação de Categorias -->
+    <nav aria-label="Categorias da loja">
+      <ul>
+        <li><a href="#todos">Todos os Produtos</a></li>
+        <li><a href="#guitarras">Guitarras</a></li>
+        <li><a href="#baixos">Baixos</a></li>
+        <li><a href="#baterias">Baterias</a></li>
+        <li><a href="#amplificadores">Amplificadores &amp; Efeitos</a></li>
+        <li><a href="#roupas-masculinas">Roupas Masculinas</a></li>
+        <li><a href="#roupas-femininas">Roupas Femininas</a></li>
+        <li><a href="#acessorios">Acessórios Rock</a></li>
+      </ul>
+    </nav>
+
+    <!-- Banner Principal -->
+    <section aria-label="Destaque principal">
+      <article>
+        <img
+          src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80"
+          alt="Banner RockLife - Instrumentos musicais e vestuário rock"
+        />
+        <h2>VIVA O ROCK N' ROLL EM CADA NOTA E ESTILO</h2>
+        <p>
+          Encontre instrumentos musicais e vestuário rock selecionados para o
+          seu dia a dia e apresentações.
+        </p>
+        <a href="#ofertas">Ver Ofertas</a>
+      </article>
+    </section>
+
+    <!-- Seção de Destaques / Categorias Rápidas -->
+    <section aria-labelledby="titulo-destaques">
+      <h2 id="titulo-destaques">Categorias em Destaque</h2>
+      <div>
+        <article>
+          <img
+            src="https://images.unsplash.com/photo-1550985616-10810253b84d?auto=format&fit=crop&w=600&q=80"
+            alt="Guitarras e instrumentos de corda em destaque"
+          />
+          <h3>Instrumentos Rock</h3>
+          <p>Guitarras, Baixos e Baterias</p>
+          <a href="#instrumentos">Explorar Instrumentos</a>
+        </article>
+
+        <article>
+          <img
+            src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80"
+            alt="Jaquetas e roupas de estilo rock em destaque"
+          />
+          <h3>Vestuário &amp; Moda Rock</h3>
+          <p>Jaquetas de Couro, Camisetas de Banda e Acessórios</p>
+          <a href="#roupas">Explorar Roupas</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Vitrine de Produtos: Instrumentos -->
+    <main>
+      <section id="instrumentos" aria-labelledby="titulo-instrumentos">
+        <h2 id="titulo-instrumentos">Instrumentos do Mundo Rock</h2>
+
+        <div>
+          <!-- Produto 1 -->
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?auto=format&fit=crop&w=500&q=80"
+              alt="Guitarra Elétrica Les Paul Custom Black"
+            />
+            <span>Guitarra</span>
+            <h3>Guitarra Elétrica Les Paul Custom Black</h3>
+            <p>
+              Corpo em mogno, captadores humbucker de alto ganho e acabamento
+              preto fosco.
+            </p>
+            <p><s>R$ 4.599,00</s></p>
+            <p><strong>R$ 3.899,00</strong></p>
+            <button type="button">Adicionar ao Carrinho</button>
+          </article>
+
+          <!-- Produto 2 -->
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=500&q=80"
+              alt="Contrabaixo Precision 4 Cordas Vintage Red"
+            />
+            <span>Baixo</span>
+            <h3>Contrabaixo Precision 4 Cordas Vintage Red</h3>
+            <p>
+              Timbre encorpado e grave definido para ensaios e apresentações.
+            </p>
+            <p><strong>R$ 2.790,00</strong></p>
+            <button type="button">Adicionar ao Carrinho</button>
+          </article>
+
+          <!-- Produto 3 -->
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=500&q=80"
+              alt="Bateria Acústica Rock Stage Master 5 Peças"
+            />
+            <span>Bateria</span>
+            <h3>Bateria Acústica Rock Stage Master 5 Peças</h3>
+            <p>
+              Bumbo de 22", ferragens reforçadas de estante dupla e pratos
+              inclusos.
+            </p>
+            <p><strong>R$ 6.499,00</strong></p>
+            <button type="button">Adicionar ao Carrinho</button>
+          </article>
+
+          <!-- Produto 4 -->
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1558098329-a11cff621064?auto=format&fit=crop&w=500&q=80"
+              alt="Amplificador de Guitarra Valvulado 50W Stage"
+            />
+            <span>Amplificador</span>
+            <h3>Amplificador Valvulado 50W Stage</h3>
+            <p>Distorção analógica, canal limpo e reverb de mola.</p>
+            <p><strong>R$ 3.200,00</strong></p>
+            <button type="button">Adicionar ao Carrinho</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Vitrine de Produtos: Roupas e Acessórios -->
+      <section id="roupas" aria-labelledby="titulo-roupas">
+        <h2 id="titulo-roupas">Roupas &amp; Estilo RockLife</h2>
+
+        <div>
+          <!-- Produto 5 -->
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?auto=format&fit=crop&w=500&q=80"
+              alt="Jaqueta de Couro Biker Heavy Metal"
+            />
+            <span>Jaquetas</span>
+            <h3>Jaqueta de Couro Biker Heavy Metal</h3>
+            <p>Couro resistente, detalhes em zíper prateado e forro interno.</p>
+            <p><strong>R$ 899,00</strong></p>
+            <button type="button">Adicionar ao Carrinho</button>
+          </article>
+
+          <!-- Produto 6 -->
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=500&q=80"
+              alt="Camiseta Vintage Tour Rock Over-Sized"
+            />
+            <span>Camisetas</span>
+            <h3>Camiseta Vintage Tour Rock Over-Sized</h3>
+            <p>100% Algodão penteado com estampa silk-screen estilo vintage.</p>
+            <p><strong>R$ 119,90</strong></p>
+            <button type="button">Adicionar ao Carrinho</button>
+          </article>
+
+          <!-- Produto 7 -->
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=500&q=80"
+              alt="Bandana Rocker Estampa Skull Stamp"
+            />
+            <span>Acessórios</span>
+            <h3>Bandana Rocker Estampa Skull Stamp</h3>
+            <p>Tecido 100% algodão para uso no pescoço, cabeça ou pulso.</p>
+            <p><strong>R$ 49,90</strong></p>
+            <button type="button">Adicionar ao Carrinho</button>
+          </article>
+
+          <!-- Produto 8 -->
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1620656798579-1984d9e87df9?auto=format&fit=crop&w=500&q=80"
+              alt="Correia em Couro com Spikes Metalizados"
+            />
+            <span>Acessórios</span>
+            <h3>Correia em Couro com Spikes Metalizados</h3>
+            <p>
+              Correia em couro com acabamento reforçado e aplicação de spikes.
+            </p>
+            <p><strong>R$ 159,00</strong></p>
+            <button type="button">Adicionar ao Carrinho</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Seção de Termos Legais, LGPD e Transparência -->
+      <section id="termos-legais" aria-labelledby="titulo-termos-legais">
+        <h2 id="titulo-termos-legais">Transparência e Termos Legais</h2>
+
+        <div class="legal-grid">
+          <article id="privacidade" class="legal-card">
+            <h3>Política de Privacidade (LGPD)</h3>
+            <p>
+              Coletamos apenas os dados estritamente necessários (como nome,
+              e-mail e informações do pedido) para processar compras, prestar
+              atendimento e cumprir obrigações legais, conforme a Lei Geral de
+              Proteção de Dados (Lei nº 13.709/2018).
+            </p>
+            <p>
+              Você pode solicitar confirmação de tratamento, correção ou
+              exclusão dos seus dados pelo e-mail
+              <strong>contato@rocklife.com.br</strong>. Cookies essenciais são
+              usados para o funcionamento da loja; cookies analíticos ou de
+              terceiros devem respeitar sua escolha de consentimento.
+            </p>
+          </article>
+
+          <article id="termos-uso" class="legal-card">
+            <h3>Termos de Uso</h3>
+            <p>
+              Ao navegar ou comprar na RockLife Store, o usuário concorda em
+              utilizar a plataforma de forma lícita, fornecendo informações
+              verdadeiras no cadastro e nos pedidos. Preços, condições de
+              pagamento e disponibilidade de estoque estão sujeitos a alteração
+              antes da confirmação do pedido.
+            </p>
+            <p>
+              Marcas, textos, layouts e materiais exibidos respeitam a
+              legislação de propriedade intelectual e direitos autorais
+              aplicáveis.
+            </p>
+          </article>
+
+          <article id="trocas-reembolso" class="legal-card" id="reembolso">
+            <h3>Política de Trocas e Reembolso (CDC)</h3>
+            <p>
+              Conforme o Código de Defesa do Consumidor (Lei nº 8.078/1990),
+              compras realizadas fora do estabelecimento comercial contam com
+              direito de arrependimento em até
+              <strong>7 (sete) dias corridos</strong>
+              a contar do recebimento do produto, com reembolso integral dos
+              valores pagos após devolução e conferência do item sem sinais de
+              uso indevido.
+            </p>
+            <p>
+              Em caso de defeito ou divergência no produto, entre em contato com
+              nosso atendimento para análise, troca ou restituição dentro dos
+              prazos legais.
+            </p>
+          </article>
+
+          <article id="dados-empresa" class="legal-card">
+            <h3>Dados Legais da Empresa</h3>
+            <p>
+              <strong>Razão Social:</strong> RockLife Comércio de Instrumentos e
+              Vestuário Ltda. [substituir pelo dado real]
+            </p>
+            <p>
+              <strong>CNPJ:</strong> 00.000.000/0001-00 [substituir pelo CNPJ
+              real]
+            </p>
+            <p>
+              <strong>Endereço:</strong> Rua Exemplo, 123, Centro, Jaguariúna -
+              SP, CEP 13820-000 [substituir pelo endereço real]
+            </p>
+            <p>
+              <strong>Canal de Atendimento e Privacidade:</strong>
+              contato@rocklife.com.br | (11) 99999-8888
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+      <div>
+        <!-- Coluna 1: Sobre -->
+        <div>
+          <h3>ROCKLIFE</h3>
+          <p>
+            Loja de instrumentos musicais e moda rock com atendimento em todo o
+            Brasil, conforme a legislação vigente.
+          </p>
+        </div>
+
+        <!-- Coluna 2: Links Úteis e Legais -->
+        <div>
+          <h4>Institucional e Legal</h4>
+          <ul>
+            <li><a href="#privacidade">Política de Privacidade</a></li>
+            <li><a href="#termos-uso">Termos de Uso</a></li>
+            <li><a href="#trocas-reembolso">Trocas e Reembolso</a></li>
+            <li><a href="#dados-empresa">Dados da Empresa</a></li>
+            <li><a href="#faq">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Atendimento -->
+        <div>
+          <h4>Atendimento</h4>
+          <p>E-mail: contato@rocklife.com.br</p>
+          <p>Telefone: (11) 99999-8888</p>
+          <p>Horário: Seg. a Sex. das 09h às 18h</p>
+        </div>
+
+        <!-- Coluna 4: Redes Sociais -->
+        <div>
+          <h4>Siga a RockLife</h4>
+          <ul>
+            <li><a href="#instagram">Instagram</a></li>
+            <li><a href="#youtube">YouTube</a></li>
+            <li><a href="#facebook">Facebook</a></li>
+            <li><a href="#spotify">Spotify Playlist</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr />
+
+      <div>
+        <p>
+          &copy; 2026 RockLife Store - Todos os direitos reservados. Imagens
+          ilustrativas; confira as especificações técnicas de cada item antes da
+          compra.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

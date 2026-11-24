@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperar Senha - RockLife Store</title>
+    <link rel="stylesheet" href="esqueci_senha.css" />
+  </head>
+  <body class="auth-page">
+    <a
+      href="index.html"
+      class="auth-brand"
+      aria-label="RockLife Store - Voltar ao início"
+    >
+      <span>ROCKLIFE</span>
+      <span>store</span>
+    </a>
+
+    <main class="auth-card">
+      <h1>Esqueci minha senha</h1>
+      <p class="auth-subtitle">
+        Informe seu e-mail cadastrado e escolha uma nova senha abaixo.
+        Utilizamos seu e-mail apenas para recuperação de acesso e segurança da
+        conta.
+      </p>
+
+      <form action="cadrastro.html" method="GET" class="auth-form">
+        <div class="form-group">
+          <label for="email">Seu e-mail cadastrado</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="seuemail@exemplo.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="nova-senha">Nova senha</label>
+          <input
+            type="password"
+            id="nova-senha"
+            name="nova-senha"
+            minlength="8"
+            placeholder="Mínimo de 8 caracteres"
+            aria-describedby="dica-nova-senha"
+            required
+          />
+          <span id="dica-nova-senha" class="form-hint"
+            >Digite a nova senha (mínimo de 8 caracteres) que você deseja usar
+            para entrar.</span
+          >
+        </div>
+
+        <button type="submit" id="btn-senha" class="btn-primary">
+          Salvar Nova Senha
+        </button>
+      </form>
+
+      <div class="auth-links">
+        <a href="cadrastro.html"> Lembrei minha senha! Voltar ao login </a>
+        <p>
+          Não tem conta?
+          <a href="../cadastro_cliente/criar_conta.html">Criar cadastro</a>
+        </p>
+        <p>
+          <a href="index.html#privacidade">Política de Privacidade (LGPD)</a>
+        </p>
+      </div>
+    </main>
+
+    <a href="../cadastro_produto/index.html" class="auth-back">&larr; Voltar para a loja</a>
+  </body>
+</html>

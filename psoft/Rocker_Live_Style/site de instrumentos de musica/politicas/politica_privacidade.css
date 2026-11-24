@@ -1,0 +1,174 @@
+
+/* =====================================
+   ROCKLIFE STORE - POLÍTICA DE PRIVACIDADE
+===================================== */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Página */
+.privacy-page {
+    min-height: 100vh;
+    background: #0b0b0f;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+/* Cabeçalho */
+.privacy-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #15151b;
+    border-bottom: 2px solid #b5121b;
+}
+
+/* Logo */
+.privacy-logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.privacy-logo span:last-child {
+    color: #e21b2d;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+/* Botão voltar */
+.btn-voltar {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #e21b2d;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background: #b5121b;
+}
+
+/* Conteúdo */
+.privacy-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Caixa principal */
+.privacy-card {
+    background: #17171e;
+    padding: 45px;
+    border: 1px solid #303039;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Título */
+.privacy-card h1 {
+    color: #e21b2d;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+/* Subtítulo */
+.privacy-subtitle {
+    color: #aaa;
+    font-size: 16px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #383840;
+    padding-bottom: 25px;
+}
+
+/* Seções */
+.privacy-card section {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #303039;
+}
+
+.privacy-card h2 {
+    color: #e21b2d;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.privacy-card p {
+    color: #d0d0d0;
+    margin-bottom: 12px;
+}
+
+/* Listas */
+.privacy-card ul {
+    padding-left: 25px;
+    color: #d0d0d0;
+}
+
+.privacy-card li {
+    margin-bottom: 8px;
+}
+
+/* Data */
+.privacy-date {
+    color: #999 !important;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+/* Rodapé */
+.privacy-footer {
+    text-align: center;
+    background: #15151b;
+    padding: 25px;
+    color: #888;
+    border-top: 1px solid #303039;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+
+    .privacy-header {
+        padding: 18px;
+        gap: 15px;
+    }
+
+    .privacy-logo {
+        font-size: 19px;
+    }
+
+    .btn-voltar {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .privacy-container {
+        margin: 25px auto;
+        padding: 0 12px;
+    }
+
+    .privacy-card {
+        padding: 22px 18px;
+    }
+
+    .privacy-card h1 {
+        font-size: 26px;
+    }
+
+    .privacy-card h2 {
+        font-size: 18px;
+    }
+}

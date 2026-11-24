@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar Conta - RockLife Store</title>
+    <link rel="stylesheet" href="crie_conta.css" />
+  </head>
+  <body class="auth-page">
+    <a
+      href="../cadastro_produto/index.html"
+      class="auth-brand"
+      aria-label="RockLife Store - Voltar ao início"
+    >
+      <span>ROCKLIFE</span>
+      <span>store</span>
+    </a>
+
+    <main class="auth-card">
+      <h1>Crie sua conta</h1>
+      <p class="auth-subtitle">
+        Cadastre-se para gerenciar seus pedidos na RockLife. Coletamos apenas os
+        dados necessários para sua conta.
+      </p>
+
+      <form action="cadrastro.html" method="GET" class="auth-form">
+        <div class="form-group">
+          <label for="nome">Seu nome</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Como devemos te chamar?"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Seu melhor e-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="seuemail@exemplo.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Crie uma senha</label>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            minlength="8"
+            placeholder="Mínimo de 8 caracteres"
+            aria-describedby="dica-senha"
+            required
+          />
+          <span id="dica-senha" class="form-hint"
+            >Use pelo menos 8 caracteres para proteger o acesso à sua
+            conta.</span
+          >
+        </div>
+
+        <div class="form-group legal-consent">
+          <label for="aceite-termos">
+            <input
+              type="checkbox"
+              id="aceite-termos"
+              name="aceite_termos"
+              required
+            />
+            <span>
+              Li e concordo com a
+              <a href="../politica_privacidade.html">
+                Política de Privacidade (LGPD)
+              </a>
+              e com os
+              <a href="index.html#termos-uso">Termos de Uso</a>.
+            </span>
+          </label>
+        </div>
+
+        <button type="submit" id="enviar" class="btn-primary">
+          Criar Minha Conta
+        </button>
+      </form>
+
+      <div class="auth-links">
+        <p>
+          Já possui uma conta?
+          <a href="cadrastro.html">Fazer login</a>
+        </p>
+        <p>
+          <a href="index.html#trocas-reembolso"
+            >Política de Trocas e Reembolso</a
+          >
+        </p>
+      </div>
+    </main>
+
+    <!-- Botão para voltar à loja -->
+    <a href="../cadastro_produto/index.html" class="auth-back">
+      &larr; Voltar para a loja
+    </a>
+  </body>
+</html>
