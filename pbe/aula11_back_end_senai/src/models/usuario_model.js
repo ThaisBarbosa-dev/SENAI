@@ -53,7 +53,7 @@ const atualizar = async (req, res) => {
 };
 
 //PATCH
-const alterar = async    (req, res) => {
+const alterar = async (req, res) => {
 
 };
 
