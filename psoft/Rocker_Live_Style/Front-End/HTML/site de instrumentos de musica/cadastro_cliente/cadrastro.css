@@ -10,18 +10,7 @@
 }
 
 /* Fundo da página */
-body.auth-page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 20px;
 
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
-
-  /* FUNDO DA PÁGINA DE LOGIN */
 
   body.auth-page {
     min-height: 100vh;
@@ -38,14 +27,14 @@ body.auth-page {
 
     background:
       linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
-      url("./img/fundo_cadastro.webp");
+      url("../img/fundo_cadastro.webp");
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-}
+
 
 /* Textura decorativa no fundo */
 body.auth-page::before {
@@ -75,12 +64,12 @@ body.auth-page::before {
   color: #ffffff;
   text-decoration: none;
   font-weight: 900;
-  letter-spacing: 5px;
+  letter-spacing: 10px;
 
   position: relative;
   z-index: 1;
 
-  transition: 0.3s;
+  transition: 1.3s;
 }
 
 .auth-brand span:first-child {
@@ -90,7 +79,7 @@ body.auth-page::before {
 }
 
 .auth-brand span:last-child {
-  font-size: 13px;
+  font-size: 33px;
   letter-spacing: 8px;
   color: #cccccc;
   text-transform: uppercase;
@@ -136,7 +125,7 @@ body.auth-page::before {
 
 /* Título */
 .auth-card h1 {
-  font-size: 27px;
+  font-size: 37px;
   margin-bottom: 12px;
   color: #ffffff;
   text-align: center;
@@ -145,8 +134,8 @@ body.auth-page::before {
 
 /* Subtítulo */
 .auth-subtitle {
-  color: #aaaaaa;
-  font-size: 14px;
+  color: #fefbfb;
+  font-size: 24px;
   line-height: 1.6;
   text-align: center;
   margin-bottom: 30px;
@@ -168,7 +157,7 @@ body.auth-page::before {
 /* Labels */
 .form-group label {
   color: #eeeeee;
-  font-size: 14px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -182,7 +171,7 @@ body.auth-page::before {
   border-radius: 9px;
 
   color: #ffffff;
-  font-size: 14px;
+  font-size: 19px;
 
   outline: none;
   transition: 0.3s;
@@ -218,10 +207,10 @@ body.auth-page::before {
 
   background: linear-gradient(135deg, #e60000, #a00000);
   border: none;
-  border-radius: 9px;
+  border-radius: 19px;
 
   color: #ffffff;
-  font-size: 15px;
+  font-size: 25px;
   font-weight: bold;
   letter-spacing: 1px;
 
@@ -252,7 +241,7 @@ body.auth-page::before {
 .auth-links a {
   color: #ff3939;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 23px;
   transition: 0.3s;
 }
 
@@ -274,7 +263,7 @@ body.auth-page::before {
 
   color: #aaaaaa;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 23px;
 
   position: relative;
   z-index: 1;

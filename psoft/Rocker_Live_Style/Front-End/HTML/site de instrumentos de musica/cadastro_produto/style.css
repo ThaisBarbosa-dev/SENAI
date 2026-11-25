@@ -2,9 +2,16 @@
    ROCKLIFE STORE — PREMIUM E-COMMERCE & AUTENTICAÇÃO
    ========================================================= */
 
+/* PASSO 1: Declarar a ordem das camadas (@layer)
+   Define a prioridade de cascata do mais básico ao mais específico/responsivo. */
 @layer reset, base, layout, components, auth, responsive;
 
+/* =========================================================
+   PASSO 2: CAMADA @layer reset
+   Normaliza comportamentos padrão do navegador sem conflitar com camadas seguintes.
+   ========================================================= */
 @layer reset {
+  /* PASSO 2.1: Box-sizing e remoção de margem padrão em todos os elementos */
   *,
   *::before,
   *::after {
@@ -12,27 +19,36 @@
     margin: 0;
   }
 
+  /* PASSO 2.2: Rolagem suave ao navegar por âncoras (#id) */
   html {
     scroll-behavior: smooth;
   }
 
+  /* PASSO 2.3: Imagens responsivas e sem espaço extra de linha */
   img {
     display: block;
     max-width: 100%;
   }
 
+  /* PASSO 2.4: Herdar tipografia nos controles de formulário */
   button,
   input {
     font: inherit;
   }
 
+  /* PASSO 2.5: Remover destaque azul padrão no toque em dispositivos móveis */
   button,
   a {
     -webkit-tap-highlight-color: transparent;
   }
 }
 
+/* =========================================================
+   PASSO 3: CAMADA @layer base
+   Define variáveis de tema (tokens), tipografia global e estilos base de tags.
+   ========================================================= */
 @layer base {
+  /* PASSO 3.1: Variáveis CSS (cores, raios de borda, sombras, espaçamentos e transição) */
   :root {
     color-scheme: dark;
     --color-bg: #090909;
@@ -56,42 +72,53 @@
     --transition: 220ms ease;
   }
 
+  /* PASSO 3.2: Estilo base do corpo da página */
   body {
     min-width: 320px;
     background: var(--color-bg);
     color: var(--color-text);
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
       "Segoe UI", sans-serif;
-    font-size: 15px;
-    line-height: 1.65;
+    font-size: 20px;
+    line-height: 1.75;
     -webkit-font-smoothing: antialiased;
   }
 
+  /* PASSO 3.3: Links herdam cor e perdem sublinhado padrão */
   a {
     color: inherit;
     text-decoration: none;
   }
 
+  /* PASSO 3.4: Cor secundária padrão para parágrafos */
   p {
     color: var(--color-muted);
   }
 
+  /* PASSO 3.5: Botões sem borda padrão e com cursor de clique */
   button {
     border: 0;
     cursor: pointer;
   }
 
+  /* PASSO 3.6: Evita que inputs estourem containers flex/grid */
   input {
     min-width: 0;
   }
 
+  /* PASSO 3.7: Cor de seleção de texto com destaque vermelho */
   ::selection {
     background: var(--color-accent);
     color: var(--color-white);
   }
 }
 
+/* =========================================================
+   PASSO 4: CAMADA @layer layout
+   Estrutura as grandes áreas: cabeçalho fixo, barra de navegação, main e rodapé.
+   ========================================================= */
 @layer layout {
+  /* PASSO 4.1: Header sticky em grid (marca | busca | ações) com efeito blur */
   body > header {
     position: sticky;
     top: 0;
@@ -102,45 +129,55 @@
     gap: clamp(18px, 3vw, 42px);
     padding: 18px var(--page-gutter);
     background: rgb(9 9 9 / 92%);
-    border-bottom: 1px solid var(--color-line);
+    border-bottom: 39px solid var(--color-line);
     backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(28px);
   }
 
+  /* PASSO 4.2: Faixa de navegação principal */
   body > nav {
     padding: 13px var(--page-gutter);
     background: var(--color-surface);
     border-bottom: 1px solid var(--color-line);
   }
 
+  /* PASSO 4.3: Lista horizontal centralizada e flexível da navegação */
   body > nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px clamp(16px, 2.5vw, 34px);
+    gap: 10px clamp(26px, 3.5vw, 39px);
     max-width: var(--content-width);
     margin-inline: auto;
     padding: 0;
     list-style: none;
   }
 
+  /* PASSO 4.4: Container central limitado pela largura máxima da loja */
   main {
     width: min(100% - (var(--page-gutter) * 2), var(--content-width));
     margin-inline: auto;
   }
 
+  /* PASSO 4.5: Espaçamento vertical das seções e compensação para header fixo */
   main > section {
     padding-block: clamp(54px, 7vw, 92px);
     scroll-margin-top: 130px;
   }
 
+  /* PASSO 4.6: Espaçamento superior e inferior do rodapé */
   body > footer {
     padding: 64px var(--page-gutter) 24px;
   }
 }
 
+/* =========================================================
+   PASSO 5: CAMADA @layer components
+   Estiliza marca, busca, botões, banners, grades de cards, rodapé e termos legais.
+   ========================================================= */
 @layer components {
+  /* PASSO 5.1: Logotipo da marca no cabeçalho */
   body > header > div:first-child > a {
     display: inline-flex;
     align-items: baseline;
@@ -150,7 +187,7 @@
 
   body > header h1 {
     color: var(--color-accent);
-    font-size: clamp(25px, 2.5vw, 34px);
+    font-size: clamp(5px, 4.5vw, 44px);
     font-weight: 950;
     letter-spacing: 0.09em;
     line-height: 1;
@@ -159,12 +196,13 @@
   body > header > div:first-child h3,
   body > header > div:first-child span {
     color: var(--color-muted);
-    font-size: 10px;
+    font-size: 29px;
     font-weight: 800;
     letter-spacing: 0.35em;
     text-transform: uppercase;
   }
 
+  /* PASSO 5.2: Formulário de busca no cabeçalho */
   body > header > div:nth-child(2) form {
     display: flex;
     gap: 9px;
@@ -173,6 +211,7 @@
     margin-inline: auto;
   }
 
+  /* PASSO 5.3: Campo de texto da busca e seu estado de foco */
   body > header input {
     width: 100%;
     min-height: 46px;
@@ -196,6 +235,7 @@
     box-shadow: 0 0 0 4px var(--color-accent-soft);
   }
 
+  /* PASSO 5.4: Botões principais (header e cards de produtos) + hover */
   body > header button,
   #instrumentos article button,
   #roupas article button {
@@ -222,6 +262,7 @@
     transform: translateY(-2px);
   }
 
+  /* PASSO 5.5: Links secundários dentro do header e links da barra de navegação */
   body > header > nav ul {
     display: flex;
     align-items: center;
@@ -234,7 +275,7 @@
 
   body > header > nav a {
     color: #c5c5c5;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 700;
     transition: color var(--transition);
   }
@@ -246,8 +287,8 @@
 
   body > nav a {
     display: inline-block;
-    color: #b7b7b7;
-    font-size: 11px;
+    color: #fffbfb;
+    font-size: 16px;
     font-weight: 800;
     letter-spacing: 0.075em;
     text-transform: uppercase;
@@ -258,8 +299,9 @@
     transform: translateY(-1px);
   }
 
+  /* PASSO 5.6: Banner hero (primeira section após o nav) com imagem de fundo, gradiente e CTA */
   body > section:first-of-type {
-    padding: 30px var(--page-gutter) 48px;
+    padding: 30px var(--page-gutter) 8px;
   }
 
   body > section:first-of-type > article {
@@ -307,7 +349,7 @@
     max-width: 760px;
     margin: 0 0 16px;
     color: var(--color-white);
-    font-size: clamp(32px, 5vw, 62px);
+    font-size: clamp(32px, 4vw, 62px);
     font-weight: 950;
     letter-spacing: -0.045em;
     line-height: 1.06;
@@ -318,7 +360,7 @@
     max-width: 560px;
     margin-bottom: 26px;
     color: #dddddd;
-    font-size: clamp(14px, 1.5vw, 17px);
+    font-size: clamp(19px, 1.9vw, 20px);
   }
 
   body > section:first-of-type > article > a {
@@ -331,7 +373,7 @@
     background: var(--color-accent);
     border: 1px solid var(--color-accent);
     border-radius: var(--radius-sm);
-    font-size: 12px;
+    font-size:16px;
     font-weight: 900;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -344,10 +386,11 @@
     box-shadow: var(--shadow-red);
   }
 
+  /* PASSO 5.7: Títulos de seção centralizados com linha vermelha decorativa abaixo */
   section h2 {
     margin-bottom: 34px;
     color: var(--color-text);
-    font-size: clamp(25px, 3vw, 36px);
+    font-size: clamp(35px, 3vw, 36px);
     font-weight: 900;
     letter-spacing: -0.035em;
     line-height: 1.15;
@@ -365,6 +408,7 @@
     content: "";
   }
 
+  /* PASSO 5.8: Grade em 2 colunas (segunda section, ex.: categorias ou destaques) */
   body > section:nth-of-type(2) > div {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -377,7 +421,7 @@
     overflow: hidden;
     padding: 15px;
     background: var(--color-card);
-    border: 1px solid var(--color-line);
+    border: 2px solid var(--color-line);
     border-radius: var(--radius-md);
     transition: transform var(--transition), border-color var(--transition),
       box-shadow var(--transition);
@@ -398,20 +442,20 @@
 
   body > section:nth-of-type(2) > div > article h3 {
     margin: 17px 3px 5px;
-    font-size: 19px;
+    font-size: 22px;
     font-weight: 850;
   }
 
   body > section:nth-of-type(2) > div > article p {
     margin: 0 3px 13px;
-    font-size: 13px;
+    font-size: 21px;
   }
 
   body > section:nth-of-type(2) > div > article a {
     display: inline-block;
     margin: 0 3px 4px;
-    color: #ff6974;
-    font-size: 12px;
+    color: #df0808;
+    font-size: 20px;
     font-weight: 800;
   }
 
@@ -419,6 +463,7 @@
     color: white;
   }
 
+  /* PASSO 5.9: Grades de produtos (#instrumentos e #roupas) em 4 colunas */
   #instrumentos > div,
   #roupas > div {
     display: grid;
@@ -445,7 +490,7 @@
   #instrumentos article:hover,
   #roupas article:hover {
     background: var(--color-card-hover);
-    border-color: rgb(225 29 46 / 55%);
+    border-color: rgba(248, 9, 9, 0.55);
     box-shadow: var(--shadow-card), var(--shadow-red);
     transform: translateY(-6px);
   }
@@ -465,26 +510,28 @@
     transform: scale(1.025);
   }
 
+  /* PASSO 5.10: Badge/tag de categoria dentro do card de produto */
   #instrumentos article > span,
   #roupas article > span {
     align-self: flex-start;
-    margin: 15px 0 7px;
+    margin: 15px 0 9px;
     padding: 4px 9px;
     color: #ff7780;
     background: var(--color-accent-soft);
     border: 1px solid rgb(225 29 46 / 20%);
     border-radius: 999px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 900;
     letter-spacing: 0.11em;
     text-transform: uppercase;
   }
 
+  /* PASSO 5.11: Título, descrição, preço riscado e preço atual nos cards */
   #instrumentos article h3,
   #roupas article h3 {
     margin-bottom: 9px;
     color: var(--color-text);
-    font-size: 15px;
+    font-size: 19px;
     font-weight: 800;
     line-height: 1.4;
   }
@@ -500,8 +547,8 @@
   #instrumentos article p:has(s),
   #roupas article p:has(s) {
     margin-bottom: 0;
-    color: #777777;
-    font-size: 12px;
+    color: #f7f4f4;
+    font-size: 13px;
   }
 
   #instrumentos article strong,
@@ -512,6 +559,7 @@
     letter-spacing: -0.025em;
   }
 
+  /* PASSO 5.12: Empurra o botão de compra para a base do card (margin-top: auto) */
   #instrumentos article button,
   #roupas article button {
     width: 100%;
@@ -519,6 +567,7 @@
     padding-inline: 10px;
   }
 
+  /* PASSO 5.13: Rodapé em grade de 4 colunas, divisor e direitos autorais */
   body > footer {
     background: #060606;
   }
@@ -542,7 +591,7 @@
   body > footer h4 {
     margin-bottom: 16px;
     color: var(--color-text);
-    font-size: 13px;
+    font-size: 19px;
     font-weight: 850;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -550,8 +599,8 @@
 
   body > footer p,
   body > footer a {
-    color: #888888;
-    font-size: 12px;
+    color: #940d0d;
+    font-size: 16px;
     line-height: 1.9;
   }
 
@@ -579,6 +628,7 @@
     text-align: center;
   }
 
+  /* PASSO 5.14: Indicador visível de foco por teclado (acessibilidade) */
   a:focus-visible,
   button:focus-visible,
   input:focus-visible {
@@ -586,51 +636,68 @@
     outline-offset: 3px;
   }
 
+  /* PASSO 5.15: Classe utilitária para leitores de tela (screen-reader only) */
   .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 
-#termos-legais .legal-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-}
-
-#termos-legais .legal-card {
-  padding: 24px;
-  background: var(--color-card);
-  border: 1px solid var(--color-line);
-  border-radius: var(--radius-md);
-}
-
-#termos-legais .legal-card h3 {
-  margin-bottom: 12px;
-  color: var(--color-text);
-  font-size: 18px;
-  font-weight: 800;
-}
-
-#termos-legais .legal-card p {
-  margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 1.65;
-}
-
-#termos-legais .legal-card p:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
+  /* PASSO 5.16: Seção de termos legais em grade de 2 colunas */
   #termos-legais .legal-grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  #termos-legais .legal-card {
+    padding: 24px;
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+  }
+
+  #termos-legais .legal-card h3 {
+    margin-bottom: 12px;
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  #termos-legais .legal-card p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  #termos-legais .legal-card p:last-child {
+    margin-bottom: 0;
   }
 }
+
+/* =========================================================
+   PASSO 6: CAMADA @layer auth
+   Espaço reservado para estilos específicos de login, cadastro e recuperação de senha.
+   ========================================================= */
+@layer auth {
+  /* Adicione aqui as regras específicas das páginas de autenticação */
+}
+
+/* =========================================================
+   PASSO 7: CAMADA @layer responsive
+   Ajusta grades e layouts para telas menores (celulares e tablets).
+   ========================================================= */
+@layer responsive {
+  /* PASSO 7.1: Coluna única na grade de termos legais em telas até 768px */
+  @media (max-width: 768px) {
+    #termos-legais .legal-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 }
