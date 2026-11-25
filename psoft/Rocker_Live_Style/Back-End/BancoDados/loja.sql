@@ -1,4 +1,4 @@
-DATABASE loja;
+CREATE DATABASE db_loja ;
 
 CREATE TABLE cliente (
     id_cliente INT PRIMARY KEY AUTO_INCREMENT,
