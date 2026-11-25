@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | RockLife Store</title>
+
+    <!-- CSS DO CHECKOUT -->
+    <link rel="stylesheet" href="carrinho.css">
+
+</head>
+
+<body>
+
+    <!-- =====================================
+         CABEÇALHO
+    ====================================== -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            ♫ ROCK<span>LIFE</span>
+        </a>
+
+        <h1>Finalizar compra</h1>
+
+        <div class="security">
+            🔒 Ambiente de compra
+        </div>
+
+        <!-- VOLTAR PARA A PÁGINA PRINCIPAL -->
+
+        <a href="../cadastro_produto/index.html" class="back-home">
+
+            <span>←</span>
+
+            Voltar à página principal
+
+        </a>
+
+    </header>
+
+
+    <!-- =====================================
+         CONTEÚDO PRINCIPAL
+    ====================================== -->
+
+    <main class="checkout-container">
+
+
+        <!-- COLUNA ESQUERDA -->
+
+        <section class="checkout-main">
+
+            <h2>Finalize seu pedido</h2>
+
+            <p class="subtitle">
+                Confira suas informações e escolha
+                como deseja pagar.
+            </p>
+
+
+            <!-- FORMULÁRIO -->
+
+            <form class="checkout-form" action="#" method="get">
+
+
+                <!-- =================================
+                     FORMAS DE PAGAMENTO
+                ================================== -->
+
+                <section class="payment-section">
+
+                    <h2>💳 Forma de pagamento</h2>
+
+                    <p class="section-description">
+                        Escolha uma das modalidades disponíveis.
+                    </p>
+
+
+                    <!-- PIX -->
+
+                    <label class="payment-option">
+
+                        <input type="radio" name="pagamento" value="pix" required>
+
+                        <div class="payment-details">
+
+                            <h3>Pix</h3>
+
+                            <span class="payment-tag">
+                                Pagamento à vista
+                            </span>
+
+                            <p>
+                                Realize seu pagamento por Pix
+                                através do ambiente do provedor.
+                            </p>
+
+                            <small>
+                                Caso exista desconto para Pix,
+                                o valor será informado antes
+                                da confirmação.
+                            </small>
+
+                        </div>
+
+                        <span class="payment-icon">▦</span>
+
+                    </label>
+
+
+                    <!-- CARTÃO DE CRÉDITO -->
+
+                    <label class="payment-option">
+
+                        <input type="radio" name="pagamento" value="credito" required>
+
+                        <div class="payment-details">
+
+                            <h3>Cartão de crédito</h3>
+
+                            <span class="payment-tag">
+                                À vista ou parcelado
+                            </span>
+
+                            <p>
+                                Pague com cartão de crédito,
+                                conforme as condições disponíveis.
+                            </p>
+
+                            <small>
+                                Parcelas, juros e valor total
+                                serão informados antes da contratação.
+                            </small>
+
+                        </div>
+
+                        <span class="payment-icon">💳</span>
+
+                    </label>
+
+
+                    <!-- CARTÃO DE DÉBITO -->
+
+                    <label class="payment-option">
+
+                        <input type="radio" name="pagamento" value="debito" required>
+
+                        <div class="payment-details">
+
+                            <h3>Cartão de débito</h3>
+
+                            <span class="payment-tag">
+                                Pagamento à vista
+                            </span>
+
+                            <p>
+                                Pagamento em uma única operação,
+                                conforme disponibilidade do provedor.
+                            </p>
+
+                            <small>
+                                O valor total será informado
+                                antes da confirmação.
+                            </small>
+
+                        </div>
+
+                        <span class="payment-icon">💳</span>
+
+                    </label>
+
+                </section>
+
+
+                <!-- =================================
+                     PARCELAMENTO
+                ================================== -->
+
+                <section class="installment-info">
+
+                    <h2>📋 Condições de parcelamento</h2>
+
+                    <p>
+                        As opções dependem das condições
+                        disponibilizadas pelo provedor
+                        de pagamento.
+                    </p>
+
+                    <div class="information-list">
+
+                        <div>
+                            <span>Parcelas disponíveis</span>
+                            <strong>Consultar no pagamento</strong>
+                        </div>
+
+                        <div>
+                            <span>Taxa de juros</span>
+                            <strong>Informada antes da contratação</strong>
+                        </div>
+
+                        <div>
+                            <span>Valor total financiado</span>
+                            <strong>Informado antes da contratação</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="important-notice">
+
+                        Todos os custos do parcelamento
+                        deverão ser apresentados antes
+                        da confirmação da compra.
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================
+                     FRETE
+                ================================== -->
+
+                <section class="shipping-info">
+
+                    <h2>🚚 Calcule seu frete</h2>
+
+                    <p>
+                        Informe seu CEP para consultar
+                        as condições de entrega.
+                    </p>
+
+                    <div class="shipping-fields">
+
+                        <label for="cep">
+                            CEP de entrega
+                        </label>
+
+                        <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9"
+                            pattern="[0-9]{5}-?[0-9]{3}" inputmode="numeric" autocomplete="postal-code"
+                            title="Digite um CEP válido." required>
+
+                        <small>
+                            Digite os oito números do seu CEP.
+                        </small>
+
+                    </div>
+
+                    <div class="shipping-result">
+                        <span>Valor do frete</span>
+                        <strong>A calcular</strong>
+                    </div>
+
+                    <div class="shipping-result">
+                        <span>Previsão de entrega</span>
+                        <strong>A consultar</strong>
+                    </div>
+
+                    <p class="shipping-notice">
+                        O custo e o prazo de entrega serão
+                        apresentados antes da confirmação.
+                    </p>
+
+                </section>
+
+
+                <!-- =================================
+                     CUPOM DE DESCONTO
+                ================================== -->
+
+                <section class="coupon-section">
+
+                    <h2>🎟️ Cupom de desconto</h2>
+
+                    <p>
+                        Tem um cupom promocional?
+                        Utilize para consultar uma oferta.
+                    </p>
+
+                    <div class="coupon-fields">
+
+                        <label for="cupom">
+                            Código promocional
+                        </label>
+
+                        <input type="text" id="cupom" name="cupom" placeholder="Exemplo: ROCK10" maxlength="30"
+                            autocomplete="off">
+
+                    </div>
+
+                    <div class="coupon-notice">
+
+                        <span>ℹ️</span>
+
+                        <p>
+                            O desconto depende da validade
+                            e das condições da promoção.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================
+                     REVISÃO DO PEDIDO
+                ================================== -->
+
+                <section class="review-info">
+
+                    <h2>📦 Confira seu pedido</h2>
+
+                    <p>
+                        Antes de continuar, verifique:
+                    </p>
+
+                    <ul>
+
+                        <li>Produtos e quantidades.</li>
+
+                        <li>Preços individuais.</li>
+
+                        <li>Descontos aplicados.</li>
+
+                        <li>Código promocional.</li>
+
+                        <li>Valor do frete.</li>
+
+                        <li>Prazo de entrega.</li>
+
+                        <li>Forma de pagamento.</li>
+
+                        <li>Valor total da compra.</li>
+
+                    </ul>
+
+                </section>
+
+
+                <!-- =================================
+                     SEGURANÇA E PRIVACIDADE
+                ================================== -->
+
+                <section class="security-info">
+
+                    <h2>🔒 Segurança dos seus dados</h2>
+
+                    <p>
+                        Seus dados pessoais deverão ser
+                        tratados conforme a Política de
+                        Privacidade da RockLife Store.
+                    </p>
+
+                    <p>
+                        Esta página não solicita nem armazena
+                        os dados do cartão. O pagamento deverá
+                        ocorrer em ambiente seguro de um
+                        provedor integrado à loja.
+                    </p>
+
+                </section>
+
+
+                <!-- =================================
+                     CONFIRMAÇÃO
+                ================================== -->
+
+                <section class="confirmation">
+
+                    <label class="confirmation-label">
+
+                        <input type="checkbox" name="confirmacao" value="sim" required>
+
+                        <span>
+                            Confirmo que revisei os produtos,
+                            valores, frete, descontos e
+                            condições de pagamento apresentados.
+                        </span>
+
+                    </label>
+
+                    <button type="submit" class="btn-finish">
+                        Continuar para revisão →
+
+                    </button>
+
+                    <small>
+                        O pagamento dependerá da integração
+                        com o provedor de pagamento.
+                    </small>
+
+                </section>
+
+
+            </form>
+
+        </section>
+
+
+
+        <!-- =====================================
+             RESUMO DA COMPRA
+        ====================================== -->
+
+        <aside class="order-summary">
+
+            <h2>Resumo da compra</h2>
+
+            <div class="summary-row">
+                <span>Subtotal dos produtos</span>
+                <strong>A calcular</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Descontos</span>
+                <strong>A calcular</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Cupom de desconto</span>
+                <strong>A validar</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Frete</span>
+                <strong>A calcular</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Juros ou acréscimos</span>
+                <strong>Se aplicáveis</strong>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="summary-total">
+
+                <span>Total da compra</span>
+
+                <strong>A calcular</strong>
+
+            </div>
+
+            <div class="summary-message">
+
+                O valor final será apresentado incluindo
+                descontos válidos, frete e eventuais encargos.
+
+            </div>
+
+
+            <!-- PAGAMENTOS -->
+
+            <div class="accepted-payments">
+
+                <h3>Formas de pagamento</h3>
+
+                <div class="accepted-payment-item">
+                    <span>▦</span>
+                    <p>Pix</p>
+                </div>
+
+                <div class="accepted-payment-item">
+                    <span>💳</span>
+                    <p>Cartão de crédito</p>
+                </div>
+
+                <div class="accepted-payment-item">
+                    <span>💳</span>
+                    <p>Cartão de débito</p>
+                </div>
+
+                <small>
+                    Disponibilidade sujeita à configuração
+                    do provedor de pagamentos.
+                </small>
+
+            </div>
+
+
+            <!-- ENTREGA -->
+
+            <div class="delivery-box">
+
+                <span>🚚</span>
+
+                <p>
+                    Consulte o custo e o prazo de entrega
+                    informando seu CEP.
+                </p>
+
+            </div>
+
+
+            <!-- LINKS LEGAIS -->
+
+            <div class="legal-links">
+
+                <a href="index.html#trocas-reembolso">
+                    Trocas e devoluções
+                </a>
+
+                <a href="index.html#privacidade">
+                    Política de privacidade
+                </a>
+
+                <a href="index.html#termos-uso">
+                    Termos e condições
+                </a>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- =====================================
+         INFORMAÇÕES LEGAIS
+    ====================================== -->
+
+    <section class="legal-container">
+
+        <h2>Informações importantes</h2>
+
+        <article class="legal-card" id="trocas">
+
+            <h3>Direito de arrependimento</h3>
+
+            <p>
+                Nas compras realizadas fora do estabelecimento
+                comercial, o consumidor pode exercer o direito
+                de arrependimento no prazo legal de sete dias,
+                conforme o artigo 49 do Código de Defesa
+                do Consumidor.
+            </p>
+
+            <p>
+                Consulte nossos canais de atendimento
+                para conhecer o procedimento.
+            </p>
+
+        </article>
+
+
+        <article class="legal-card" id="privacidade">
+
+            <h3>Política de privacidade</h3>
+
+            <p>
+                A RockLife Store deverá informar como
+                os dados pessoais dos clientes são
+                coletados, utilizados e protegidos.
+            </p>
+
+        </article>
+
+
+        <article class="legal-card" id="termos">
+
+            <h3>Termos e condições</h3>
+
+            <p>
+                Consulte as condições de compra,
+                disponibilidade dos produtos, pagamento,
+                entrega, garantia e atendimento.
+            </p>
+
+        </article>
+
+    </section>
+
+
+
+    <!-- =====================================
+         RODAPÉ
+    ====================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-column">
+
+                <h3>ROCKLIFE STORE</h3>
+
+                <p>
+                    Produtos para quem vive
+                    a música e a cultura rock.
+                </p>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Identificação da loja</h3>
+
+                <p>Razão social: [
+                <ul>
+                    <li><a href="#instagram">Instagram</a></li>
+                    <li><a href="#youtube">YouTube</a></li>
+                    <li><a href="#facebook">Facebook</a></li>
+                    <li><a href="#spotify">Spotify Playlist</a></li>
+                </ul>]</p>
+
+                <p>CPF/CNPJ: [00.000.000/0001-00 [substituir pelo CNPJ
+              real]]</p>
+
+                <p>Endereço: [Rua Exemplo, 123, Centro, Jaguariúna -
+              SP, CEP 13820-000 [substituir pelo endereço real]]</p>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Atendimento</h3>
+
+                <p>E-mail: [contato@rocklife.com.br]</p>
+
+                <p>Telefone: [6462-6767]</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 RockLife Store.
+                Todos os direitos reservados.
+            </p>
+
+            <p>
+                Feito para quem vive o rock! 🎸
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
