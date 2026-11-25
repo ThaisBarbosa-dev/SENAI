@@ -26,31 +26,16 @@ body.auth-page {
   font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;
 
-  /* FUNDO DA RECUPERAÇÃO DE SENHA */
-
-  body.auth-page {
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 30px 20px;
-
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-
     background:
       linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75)),
-      url("./img/fundo_esqueci_senha.webp");
+      url("../img/fundo_esqueci_senha.webp");
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-}
+
 
 /* Textura decorativa */
 body.auth-page::before {
@@ -90,7 +75,7 @@ body.auth-page::before {
 }
 
 .auth-brand span:first-child {
-  font-size: 36px;
+  font-size: 56px;
   color: #ff2424;
 
   text-shadow:
@@ -99,7 +84,7 @@ body.auth-page::before {
 }
 
 .auth-brand span:last-child {
-  font-size: 13px;
+  font-size: 33px;
   color: #cccccc;
   letter-spacing: 9px;
   text-transform: uppercase;
@@ -155,7 +140,7 @@ body.auth-page::before {
 .auth-card h1 {
   color: #ffffff;
 
-  font-size: 27px;
+  font-size: 37px;
   font-weight: 800;
 
   text-align: center;
@@ -167,7 +152,7 @@ body.auth-page::before {
 .auth-subtitle {
   color: #aaaaaa;
 
-  font-size: 14px;
+  font-size: 24px;
   line-height: 1.7;
 
   text-align: center;
@@ -196,7 +181,7 @@ body.auth-page::before {
 .form-group label {
   color: #eeeeee;
 
-  font-size: 14px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -211,7 +196,7 @@ body.auth-page::before {
   border-radius: 9px;
 
   color: #ffffff;
-  font-size: 14px;
+  font-size: 19px;
 
   outline: none;
 
@@ -238,7 +223,7 @@ body.auth-page::before {
 .form-hint {
   color: #999999;
 
-  font-size: 12px;
+  font-size: 22px;
   line-height: 1.5;
 }
 
@@ -259,7 +244,7 @@ body.auth-page::before {
 
   color: #ffffff;
 
-  font-size: 15px;
+  font-size: 19px;
   font-weight: bold;
   letter-spacing: 1px;
 
@@ -297,7 +282,7 @@ body.auth-page::before {
 .auth-links a {
   color: #ff3939;
 
-  font-size: 13px;
+  font-size: 19px;
   font-weight: bold;
 
   text-decoration: none;
@@ -317,7 +302,7 @@ body.auth-page::before {
   margin-top: 20px;
 
   color: #aaaaaa;
-  font-size: 13px;
+  font-size: 23px;
 }
 
 /* =========================================
@@ -329,7 +314,7 @@ body.auth-page::before {
 
   color: #aaaaaa;
 
-  font-size: 13px;
+  font-size: 23px;
   text-decoration: none;
 
   position: relative;

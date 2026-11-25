@@ -19,32 +19,22 @@ body.auth-page {
   padding: 30px 20px;
 
   font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
+  color: #030303;
 
-  /* FUNDO DA PÁGINA DE CRIAR CONTA */
-
-  body.auth-page {
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 30px 20px;
-
-    font-family: Arial, Helvetica, sans-serif;
-    color: #120101;
-
-    background:
-      linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.8)),
+  
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.75)),
       url("../img/fundo_criar_conta.webp");
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-  }
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f424d9;
+
 }
 
 /* Logo */
@@ -57,13 +47,13 @@ body.auth-page {
 
   text-decoration: none;
   font-weight: 900;
-  letter-spacing: 5px;
+  letter-spacing: 15px;
 
   transition: 0.3s;
 }
 
 .auth-brand span:first-child {
-  font-size: 36px;
+  font-size: 44px;
   color: #ff2424;
 
   text-shadow:
@@ -72,8 +62,8 @@ body.auth-page {
 }
 
 .auth-brand span:last-child {
-  font-size: 13px;
-  color: #cccccc;
+  font-size: 33px;
+  color: #fdfbfb;
   letter-spacing: 9px;
   text-transform: uppercase;
 }
@@ -120,19 +110,19 @@ body.auth-page {
 
 /* Título */
 .auth-card h1 {
-  font-size: 28px;
+  font-size: 38px;
   font-weight: 800;
 
   text-align: center;
-  margin-bottom: 12px;
+  margin-bottom: 22px;
 
   color: #ffffff;
 }
 
 /* Subtítulo */
 .auth-subtitle {
-  color: #aaaaaa;
-  font-size: 14px;
+  color: #f6f6f6;
+  font-size: 24px;
   line-height: 1.6;
 
   text-align: center;
@@ -156,7 +146,7 @@ body.auth-page {
 /* Nome dos campos */
 .form-group label {
   color: #eeeeee;
-  font-size: 14px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -168,18 +158,18 @@ body.auth-page {
   background: #252525;
 
   border: 1px solid #444444;
-  border-radius: 9px;
+  border-radius: 10px;
 
   color: #ffffff;
-  font-size: 14px;
+  font-size: 20px;
 
   outline: none;
-  transition: 0.3s;
+  transition: 1.3s;
 }
 
 /* Texto dentro dos campos */
 .form-group input::placeholder {
-  color: #888888;
+  color: #777777;
 }
 
 /* Quando clicar nos campos */
@@ -195,7 +185,7 @@ body.auth-page {
 /* Texto de orientação da senha */
 .form-hint {
   color: #999999;
-  font-size: 12px;
+  font-size: 17px;
   line-height: 1.5;
 }
 
@@ -209,10 +199,10 @@ body.auth-page {
   background: linear-gradient(135deg, #ed0000, #a00000);
 
   border: none;
-  border-radius: 9px;
+  border-radius: 22px;
 
   color: #ffffff;
-  font-size: 15px;
+  font-size:25px;
   font-weight: bold;
   letter-spacing: 1px;
 
@@ -238,13 +228,13 @@ body.auth-page {
 
 /* Links */
 .auth-links {
-  margin-top: 25px;
+  margin-top: 5px;
   text-align: center;
 }
 
 .auth-links p {
-  color: #aaaaaa;
-  font-size: 13px;
+  color: #faf8f8;
+  font-size: 23px;
 }
 
 /* Link para login */
@@ -264,10 +254,10 @@ body.auth-page {
 
 /* Voltar para a loja */
 .auth-back {
-  margin-top: 25px;
+  margin-top: 45px;
 
-  color: #aaaaaa;
-  font-size: 13px;
+  color: #fffefe;
+  font-size: 23px;
   text-decoration: none;
 
   transition: 0.3s;
@@ -282,6 +272,7 @@ body.auth-page {
 ========================================== */
 
 @media (max-width: 600px) {
+
   /* Políticas no celular */
   .legal-consent {
     padding: 13px;
@@ -331,7 +322,7 @@ body.auth-page {
     align-items: flex-start;
     gap: 12px;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 24px;
     line-height: 1.7;
     color: #eeeeee;
     cursor: pointer;
@@ -339,9 +330,9 @@ body.auth-page {
 
   /* Checkbox */
   .legal-consent input[type="checkbox"] {
-    width: 19px;
+    width: 29px;
     height: 19px;
-    min-width: 19px;
+    min-width: 29px;
     margin-top: 3px;
     padding: 0;
     accent-color: #ff2929;
