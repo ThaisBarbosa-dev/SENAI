@@ -1,0 +1,23 @@
+[
+	{
+	
+		"nome": "Monitor Samsung",
+		"descricao": "Monitor 26 polegadas",
+		"preco": "7999.90"
+	
+	},
+	{
+
+		"nome": "Mouse Colorido",
+		"descricao": "Mouse óptico",
+		"preco": "160.90"
+	
+	},
+	{
+	
+		"nome": "Teclado Rosa",
+		"descricao": "Teclado USB-Rosa",
+		"preco": "89.90"
+	
+	}
+]
